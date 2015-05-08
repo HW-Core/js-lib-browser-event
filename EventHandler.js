@@ -11,20 +11,19 @@ hw2.define([
     var $ = this;
     $.Browser.EventHandler = $.Class({members: [
             {
-                attributes: "public static",
-                name: "onBodyLoad",
-                val: function (handler) {
+                a: "public static", n: "onBodyLoad", v: function (handler) {
                     if (document.readyState === "complete") {
                         handler();
                         return;
                     }
 
-                    if (window.addEventListener) {
-                        window.addEventListener("load", handler, false);
-                    }
-                    else if (window.attachEvent) {
-                        window.attachEvent("onload", handler);
-                    }
+                    this.s.replaceEventListner(window, "load", handler);
+                }
+            },
+            {
+                a: "public static", n: "replaceEventListner", v: function (element, event, handler, useCapture) {
+                    element.removeEventListener(event, handler);
+                    element.addEventListener(event, handler, false);
                 }
             }
         ]}
