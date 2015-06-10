@@ -5,9 +5,9 @@
 
 'use strict';
 
-hw2.define([
-    'hw2!{PATH_JS_LIB}browser/event/include.js',
-    'hw2!{PATH_JS_LIB}browser/event/EventHandler.js'
+hwc.define([
+    'hwc!{PATH_JS_LIB}browser/event/include.js',
+    'hwc!{PATH_JS_LIB}browser/event/EventHandler.js'
 ],function () {
     var $ = this;
 });
