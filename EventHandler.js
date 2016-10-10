@@ -1,7 +1,7 @@
 'use strict';
 
 hwc.define([
-    "hwc!{PATH_JS_LIB}browser/event/include.js"
+    "hwc!{PATH_JS_LIB}browser-event/include.js"
 ], function () {
     var $ = this;
     $.Browser.EventHandler = $.Class({members: [
